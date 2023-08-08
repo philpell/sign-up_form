@@ -1,1 +1,160 @@
+:root{
+    --form-color: white;
+    --blue-color: #00a8f3;
+    --font-family: 'Calibri', Arial, 'Trebuchet MS', sans-serif, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+
+}
+
+.banner {
+    background-color: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    left: 0%;
+    top: 28%;
+    width: 40vw;
+    height: 35vh;
+    z-index: 1;
+}
+
+.leftPanel {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    width: 40vw;
+    height: 100vh;
+    background-image: url("images/signUpLeft.jpg");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    z-index: auto;   
+}
+
+.formPanel {
+    position: absolute;
+    right: 0%;
+    top: 0%;
+    background-color: var(--form-color);
+    width: 60vw;
+    height: 100vh;
+}
+
+.formBanner {
+    position: absolute;
+    left: 0%;
+    top: 0%;
+    height: 10vh;
+    width: 100%;
+    overflow: auto;
+    margin: 0px;
+}
+
+#companyLogo {
+    position: fixed;
+    left: 41%;
+    top: 0%;
+    width: 17vw;
+    height: 14vh;
+}
+
+.formMain {
+    position: absolute;
+    left: 25%;
+    top: 15%;
+    height: 70vh;
+    width: 30vw;
+    overflow: auto;
+    margin: 0px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+    border-radius: 15px;
+}
+
+fieldset {
+    position: absolute;
+    left: 4%;
+    top: 2%;
+    bottom: 15%;
+    width: 26vw;
+    height: 60vh;
+    font-family: var(--font-family);
+    font-size: 20px;
+    line-height: 30px;
+    border: none;
+    background-color: white;
+}
+
+legend{
+    text-align: center;
+    margin-top: 20px;
+    font-size: 23px;
+    font-weight: 700;
+    
+}
+
+.formFooter {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    height: 10vh;
+    width: 100%;
+    overflow: auto;
+    margin: 0px;
+}
+
+.photoRights {
+    position: absolute;
+    left: 1%;
+    bottom: 1%;
+    font-size: 1.7vh;
+    color: white;
+    width: 15vw;
+    font-family: var(--font-family);
+}
+
+h3 {
+    position: absolute;
+    right: 1%;
+    top: 1%;
+    text-align: left;
+    font-family: var(--font-family);
+    color: black;
+    font-size: 14px;
+}
+
+.logIn {
+    text-decoration: none;
+    color: var(--blue-color);
+}
+
+button {
+    position: absolute;
+    bottom: 0.5pc;
+    align-items: center;
+    width: 25vw;
+    height: 12%;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border-radius: 10px;
+}
+
+.nameData {
+    border: none;
+    display: flex;
+}
+
+#firstName, #lastName{
+  flex: 1;
+  width: 45%;
+  border: none;
+  font-size: 17px;
+  border-bottom: 2px solid rgba(0,0,0, 0.12);
+
+}
+
+
+
+
 
