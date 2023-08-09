@@ -10,13 +10,13 @@
     <div class="container">
         <div class="leftPanel">
             <div class="photoRights"> 
-                <p>Photo by Renan Brun on Unsplash</p>
+                <h4>Photo by Renan Brun on Unsplash</h4>
             </div>
         </div>    
         <div class="formPanel">
             <div class="formBanner">
                  <h3> Create an account or <span><a href="#" class="logIn">log in</a></span></h3>
-                 <a href="https://htmlpreview.github.io/?https://github.com/philpell/landing-page/blob/main/index.html"><img id="companyLogo" src="images/CompellingLogoSeven.jpg" alt="The Compelling Copmany Logo"></a>
+                 <a href="https://htmlpreview.github.io/?https://github.com/philpell/landing-page/blob/main/index.html"><img id="companyLogo" src="images/CompellingLogoSeven.jpg" alt="The Compelling company logo"></a>
             </div>
             <div class="formMain">
               
@@ -24,30 +24,42 @@
                     <fieldset>
                         <legend>Let's dive in!</legend>
                         <div class="nameData">
-                            <label for="firstName">First Name:</label>
-                            <input type="text" id="firstName" name="firstName"><br>  
-
-                            <label for="lastName">Last Name:</label>
-                            <input type="text" id="lastName" name="lastName"><br>
+                            <p>
+                                <label for="firstName">First Name:</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </p>
+                            <p>
+                                <label for="lastName">Last Name:</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </p>
                         </div>
-
-                            <label for="phoneNumber">Phone Number:</label>
-                            <input type="tel" id="phoneNumber" name="phoneNumber"><br>
-                             
-                            <label for="email">Email:</label>
-                            <input type="email" id="email" name="email"><br>
-                           
-                            <label for="password">Password:</label>
-                            <input type="password" id="password" name="password"><br>
-                           
-                            <label for="passwordConf">Confirm password:</label>
-                            <input type="password" id="passwordConf" name="passwordConf"><br>
-                        
-                            <button type="submit">Submit</button>
+                        <div class="contactData">
+                            <p>
+                                <label for="phoneNumber">Phone Number:</label>
+                                <input type="tel" id="phoneNumber" name="phoneNumber" required>
+                            </p>
+                            <p>  
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                            </p>
+                        </div>
+                        <div class="passwordData">
+                            <p>
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" name="password" required>
+                            </p>
+                            <p>
+                                <label for="passwordConf">Confirm password:</label>
+                                <input type="password" id="passwordConf" name="passwordConf" required>
+                            </p>
+                        </div>
+                            <button type="submit">Create Account</button>
                     </fieldset>
                 </form>
             </div>
             <div class="formFooter">
+                <h5>Designed and built by Phil Pell</h5>
+                <a href="https://github.com/philpell/sign-up_form"><img id="githubLogo" src="images/gitHubLogo.jpg" alt="github Logo"></a>
             </div>
         </div>
     </div>

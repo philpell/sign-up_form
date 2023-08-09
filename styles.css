@@ -6,19 +6,9 @@
 
 .container {
     display: flex;
-
 }
 
-.banner {
-    background-color: rgba(0, 0, 0, 0.4);
-    position: absolute;
-    left: 0%;
-    top: 28%;
-    width: 40vw;
-    height: 35vh;
-    z-index: 1;
-}
-
+/* Set up for left side image and citing */
 .leftPanel {
     position: absolute;
     left: 0%;
@@ -31,6 +21,29 @@
     z-index: auto;   
 }
 
+/* Display citation when cursor over background photo */
+.leftPanel:hover h4 {
+  visibility: visible;
+  opacity: 1;
+}
+
+H4 {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s, visibility 1s;
+}
+
+.photoRights {
+  position: absolute;
+  left: 1%;
+  bottom: 1%;
+  font-size: 1.9vh;
+  color: white;
+  width: 15vw;
+  font-family: var(--font-family);
+}
+
+/* Set up for form background*/
 .formPanel {
     position: absolute;
     right: 0%;
@@ -58,12 +71,63 @@
     height: 14vh;
 }
 
+.logIn {
+  text-decoration: none;
+  color: var(--blue-color);
+}
+
+.formFooter {
+  text-decoration: none;
+  position: absolute;
+  left: 0%;
+  bottom: 0%;
+  height: 10vh;
+  width: 100%;
+  overflow: auto;
+  margin: 0px;
+}
+
+h3 {
+  position: absolute;
+  right: 1%;
+  top: 1%;
+  text-align: left;
+  font-family: var(--font-family);
+  color: black;
+  font-size: 14px;
+}
+
+/* Github link and text formatting */
+#githubLogo {
+  position: absolute;
+  right: 1pc;
+  bottom: 1pc;
+  height: 4vh;
+  background-blend-mode: lighten;
+}
+
+h5 {
+  position: absolute;
+  right: 3pc;
+  text-decoration: none;
+  font-family: var(--font-family);
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 1s, visibility 1s;
+}
+
+.formFooter:hover h5 {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* Set up for main form section */
 .formMain {
     position: absolute;
-    left: 25%;
-    top: 15%;
-    height: 70vh;
-    width: 30vw;
+    left: 22%;
+    top: 17%;
+    height: 72vh;
+    width: 35vw;
     overflow: auto;
     margin: 0px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
@@ -72,16 +136,17 @@
 
 fieldset {
     position: absolute;
-    left: 4%;
-    top: 2%;
+    left: 10%;
+    top: 10%;
     bottom: 15%;
-    width: 26vw;
+    width: 22vw;
     height: 60vh;
     font-family: var(--font-family);
     font-size: 20px;
-    line-height: 30px;
+    line-height: 13px;
     border: none;
     background-color: white;
+    box-sizing: border-box;
 }
 
 legend{
@@ -89,47 +154,12 @@ legend{
     margin-top: 20px;
     font-size: 23px;
     font-weight: 700;
-    
-}
-
-.formFooter {
-    position: absolute;
-    left: 0%;
-    bottom: 0%;
-    height: 10vh;
-    width: 100%;
-    overflow: auto;
-    margin: 0px;
-}
-
-.photoRights {
-    position: absolute;
-    left: 1%;
-    bottom: 1%;
-    font-size: 1.7vh;
-    color: white;
-    width: 15vw;
-    font-family: var(--font-family);
-}
-
-h3 {
-    position: absolute;
-    right: 1%;
-    top: 1%;
-    text-align: left;
-    font-family: var(--font-family);
-    color: black;
-    font-size: 14px;
-}
-
-.logIn {
-    text-decoration: none;
-    color: var(--blue-color);
 }
 
 button {
     position: absolute;
-    bottom: 0.5pc;
+    bottom: 2%;
+    left: 5%;
     align-items: center;
     width: 25vw;
     height: 12%;
@@ -140,21 +170,64 @@ button {
     border-radius: 10px;
 }
 
-.nameData {
+p {
+    flex: 1;
+}
+
+.nameData, .contactData, .passwordData {
     border: none;
     display: flex;
+    width: 360px;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
-#firstName, #lastName{
-  flex: 1;
-  width: 45%;
-  border: none;
-  font-size: 17px;
-  border-bottom: 2px solid rgba(0,0,0, 0.12);
+/* Formatting for selection of form sections */
+  input {
+    width: 90%;
+    appearance: none;
+    border: none;
+    font-size: 17px;
+    border-bottom: 2px solid rgba(0,0,0, 0.12);
+  }
 
+/* Set underline to blue */
+  input:focus {
+    appearance: none;
+    outline: none;
+    border-bottom: 2px solid var(--blue-color);
+  }
+
+  label {
+    font-size: medium;
+    position: relative;
+    top: 19px;
+    transition: all .3s ease-in;
+  }
+
+/* move label and change colour on input select */
+  p:focus-within label {
+    color: var(--blue-color);
+    position: relative;
+    top: 0px;
+    font-size: 14px;
+  }
+
+/* Set formatting for scroll bar when overflow occurs */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+ 
+::-webkit-scrollbar-thumb {
+  background: var(--blue-color);
+  border-radius: 15px; 
+}
 
-
-
-
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
