@@ -23,36 +23,44 @@
                 <form action="#" method="post">
                     <fieldset>
                         <legend>Let's dive in!</legend>
-                        <div class="nameData">
-                            <p>
-                                <label for="firstName">First Name:</label>
-                                <input type="text" id="firstName" name="firstName" required>
-                            </p>
-                            <p>
-                                <label for="lastName">Last Name:</label>
-                                <input type="text" id="lastName" name="lastName" required>
-                            </p>
-                        </div>
-                        <div class="contactData">
-                            <p>
-                                <label for="phoneNumber">Phone Number:</label>
-                                <input type="tel" id="phoneNumber" name="phoneNumber" required>
-                            </p>
-                            <p>  
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                            </p>
-                        </div>
-                        <div class="passwordData">
-                            <p>
-                                <label for="password">Password:</label>
-                                <input type="password" id="password" name="password" required>
-                            </p>
-                            <p>
-                                <label for="passwordConf">Confirm password:</label>
-                                <input type="password" id="passwordConf" name="passwordConf" required>
-                            </p>
-                        </div>
+                            <h6>(Please complete all sections below)</h6>
+                                <div class="nameData">
+                                    <p>
+                                        <div class="field">
+                                            <input type="text" name="firstName" id="firstName" placeholder="e.g. Jane" required>
+                                            <label for="firstName">First Name:</label>
+                                        </div>
+
+                                        <div class="field">
+                                            <input type="text" name="lastName" id="lastName" placeholder="e.g. Smith" required>
+                                            <label for="lastName">Last Name:</label>
+                                        </div>
+                                </div>
+                                <div class="contactData">
+                                        <div class="field">
+                                            <input type="tel" name="phoneNumber" id="phoneNumber" placeholder="e.g. 07123 456789" required>
+                                            <label for="phoneNumber">Phone number</label>
+                                        </div>
+
+                                        <div class="field">
+                                            <input type="email" name="email" id="email" placeholder="e.g. name@domain.com" required>
+                                            <label for="email">Email</label>
+                                          </div>
+                                </div>
+                                <div class="passwordData">
+                                        <div class="field">
+                                            <input type="password" id="password" placeholder="&nbsp;" name="password" 
+                                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                            title="Must contain at least one number, one upper and lowercase letter, and at least 8 or more characters" required>
+                                            <label for="password">Password:</label>
+                                        </div>
+                                        <div class="field">
+                                            <input type="password" id="passwordConf" placeholder="&nbsp;" name="passwordConf" 
+                                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+                                            title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
+                                            <label for="passwordConf">Confirm password:</label>
+                                        </div>
+                                </div> 
                             <button type="submit">Create Account</button>
                     </fieldset>
                 </form>

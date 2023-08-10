@@ -137,7 +137,7 @@ h5 {
 fieldset {
     position: absolute;
     left: 10%;
-    top: 10%;
+    top: 9%;
     bottom: 15%;
     width: 22vw;
     height: 60vh;
@@ -151,9 +151,15 @@ fieldset {
 
 legend{
     text-align: center;
-    margin-top: 20px;
     font-size: 23px;
     font-weight: 700;
+}
+
+h6{
+  text-align: center;
+  margin: 2px 0 -7px;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 button {
@@ -170,16 +176,12 @@ button {
     border-radius: 10px;
 }
 
-p {
-    flex: 1;
-}
-
 .nameData, .contactData, .passwordData {
     border: none;
     display: flex;
     width: 360px;
     padding: 0;
-    margin: 0;
+    margin-top: 30px;
     box-sizing: border-box;
 }
 
@@ -190,6 +192,9 @@ p {
     border: none;
     font-size: 17px;
     border-bottom: 2px solid rgba(0,0,0, 0.12);
+    transition: all 0.2s;
+    cursor: text;
+    font-size: 18px;
   }
 
 /* Set underline to blue */
@@ -200,18 +205,55 @@ p {
   }
 
   label {
-    font-size: medium;
+    font-size: 12px;
     position: relative;
-    top: 19px;
     transition: all .3s ease-in;
   }
 
 /* move label and change colour on input select */
-  p:focus-within label {
+  .field {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  .field:focus-within label {
     color: var(--blue-color);
     position: relative;
     top: 0px;
     font-size: 14px;
+  }
+  
+/* Set label position and input format whilst placeholder is present*/
+  input:placeholder-shown + label {
+    cursor: text;
+    max-width: 66.66%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transform-origin: left bottom;
+    transform: translate(0, 1rem) scale(1.5);
+  }
+
+/* Hide the placeholder when the input is not focused. */
+  ::-webkit-input-placeholder {
+    opacity: 0;
+    transition: inherit;
+  }
+
+/* Show the placeholder when the input is focused. */
+  input:focus::-webkit-input-placeholder {
+    opacity: 1;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+
+/* Lock label in place when placeholder replaced by text input */
+  input:not(:placeholder-shown) + label,
+  input:focus + label {
+    transform: translate(0, 0) scale(1);
+    cursor: pointer;
   }
 
 /* Set formatting for scroll bar when overflow occurs */
